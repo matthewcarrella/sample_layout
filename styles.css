@@ -1,0 +1,156 @@
+body {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+header {
+	background-color: yellow;
+	min-height: 10vh;
+}
+
+footer {
+	background-color: red;
+	min-height: 10vh;
+}
+
+
+section {
+	display: flex;
+	flex-direction: row;
+	min-height: 80vh;
+}
+
+main {
+	background-color: cyan;
+	min-width: 50vh;
+	min-height: 60vh;
+	flex: 1;
+}
+
+nav {
+	background-color: pink;
+	min-width: 20vw;
+	min-height: 20vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+
+nav > * {
+	margin: 50px;
+	padding: 50px;
+	border: 1px solid black;
+	flex-basis: 33%;
+}
+
+a {
+	text-decoration: none;
+}
+
+aside {
+	background-color: wheat;
+	min-width: 10vw;
+	min-height: 20vh;
+	display: flex;
+	flex-direction: column;
+}
+
+div#asideCard {
+	border: 1px solid black;
+	margin: 25px;
+	flex-basis: 5%;
+	padding: 20px;
+}
+
+div#asideLinks {
+	border: 1px solid black;
+	margin: 25px;
+	flex-basis: 50%;
+}
+
+div#asideLinks > ul > li {
+	margin: 50px;
+}
+
+/* footer styles */
+
+div#footerCard {
+	border: 1px solid black;
+	float: left;
+	width: 350px;
+	height: 100px;
+	margin: 10px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+
+
+div.field {
+	flex-basis: 20%;
+	background-color: black;
+	color: white;
+}
+
+div.data {
+	flex-basis: 70%;
+}
+
+/* small screen styles */
+
+@media (max-width: 768px) {
+	section {
+		flex-direction: column;
+	}
+
+	nav, aside {
+		width: 100%;
+	}
+
+	nav {
+		flex-direction: row;
+	}
+
+	aside {
+		flex-direction: row;
+	}
+
+	div#asideCard {
+		background-color: grey;
+		flex-basis: 50%;
+
+	}
+
+	div#asideLinks {
+		flex-basis: 50%;
+	}
+}
+
+/* large screen styles */
+
+@media (min-width: 768px) {
+	aside {
+		max-width: 30vw;
+	}
+}
+
+main {
+	display: grid;
+	grid-template-areas: 
+						 "item1 item2 item2 item2"
+						
+						 "item3 item3 item3 item3"
+}
+
+[class^="item"] {
+	border: 1px solid black;
+}
+
+.item1 { grid-area: item1; }
+.item2 { grid-area: item2; }
+.item3 { grid-area: item3; }
+
+
