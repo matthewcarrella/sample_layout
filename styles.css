@@ -1,3 +1,7 @@
+* {
+	margin: 0;
+	padding: 0;
+}
 body {
 	display: flex;
 	flex-direction: column;
@@ -28,21 +32,14 @@ main {
 	flex: 1;
 }
 
-nav {
-	background-color: pink;
-	min-width: 20vw;
-	min-height: 20vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
+
 
 
 nav > * {
-	margin: 50px;
-	padding: 50px;
+
+
 	border: 1px solid black;
-	flex-basis: 33%;
+	margin: 0;
 }
 
 a {
@@ -110,9 +107,27 @@ div.data {
 		width: 100%;
 	}
 
+	/*nav {
+		display: grid;
+		background-color: orchid;
+		grid-template-areas: "one two three";
+	}
+
+	.one { grid-area: one; }
+	.two { grid-area: two; }
+	.three { grid-area: three; }
+
+*/
+
 	nav {
+		display: flex;
 		flex-direction: row;
 	}
+
+	nav > * {
+		flex-basis: 33%;
+	}
+	
 
 	aside {
 		flex-direction: row;
@@ -125,7 +140,7 @@ div.data {
 	}
 
 	div#asideLinks {
-		flex-basis: 50%;
+		flex-basis: 5px;
 	}
 }
 
